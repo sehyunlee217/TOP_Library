@@ -21,6 +21,13 @@ function addBookToLibrary(book, library) {
 
 function displayLibrary(library) {
     const tableBody = document.querySelector("tbody");
+    console.log(tableBody);
+    // if the second child of tableBody is not empty, 
+    // dump everything starting from secondchild.
+
+    // Or create function that would just display 
+    // last child of tableBody 
+
     for (let book of library) {
         const tableRow = document.createElement("tr");
         tableBody.appendChild(tableRow);
@@ -35,23 +42,32 @@ function displayLibrary(library) {
     }
 }
 
-
-// const title = window.prompt("Enter Title");
-// const author = window.prompt("Enter Author");
-// const num_pages = window.prompt("Enter Number of Pages");
-// const read = window.prompt("Enter Whether read or not");
-
-const book1 = new Book("hi", "hello", "tis", '232');
-const book2 = new Book("ps", "sdf", "fsfd", "sfdfsd");
-const book3 = new Book("ps", "sdf", "fsfd", "sfdfsd");
+const book1 = new Book("Harry Potter", "J.K Rolling", "1932", "Yes");
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee", "302", "Yes");
+const book3 = new Book("The Fellowship of the Ring", "J.R.R. Tolkien", "1222", "No");
 
 
-addBookToLibrary(book1, myLibrary);
-addBookToLibrary(book2, myLibrary);
-addBookToLibrary(book3, myLibrary);
+// addBookToLibrary(book1, myLibrary);
+// addBookToLibrary(book2, myLibrary);
+// addBookToLibrary(book3, myLibrary);
 
-// const user_book = new Book(title, author, num_pages, read);
+// displayLibrary(myLibrary);
 
-// addBookToLibrary(user_book, myLibrary);
-displayLibrary(myLibrary);
-// console.log(myLibrary);
+const submitForm = document.querySelector("form");
+
+submitForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const submitTitle = event.target["submitTitle"].value;
+    const submitAuthor = event.target["submitAuthor"].value;
+    const submitNumpages = event.target["submitPages"].value;
+    const submitStatus = event.target["submitStatus"].value;
+
+    let newBook = new Book(submitTitle, submitAuthor, submitNumpages, submitStatus);
+
+    addBookToLibrary(newBook, myLibrary);
+
+    // console.log(newBook);
+    displayLibrary(myLibrary);
+    // console.log(myLibrary);
+});
