@@ -14,8 +14,8 @@
         <h1>Mini Library</h1>
         <p>
           This is a Mini Library System created using HTML, CSS, and JavaScript.
-          This is the JavaScript section of the
-          <a href="https://www.theodinproject.com/">Odin Project</a>
+          This is a JavaScript section of the
+          <a href="https://www.theodinproject.com/">Odin Project</a>.
         </p>
       </div>
       <div class="content">
@@ -24,47 +24,57 @@
           <th class="th_author">Author</th>
           <th class="th_pages">Pages</th>
           <th class="th_status">Status</th>
-          <th class="th_delete"></th>
+          <th class="th_delete">Action</th>
         </table>
 
         <hr />
 
-        <div class="submit">
+        <div class="showForm">
+          <button id="add_book">+</button>
+        </div>
+
+        <div id="submitForm" style="visibility: hidden">
           <form class="formGrid">
-            <label for="title">Book Title</label>
-            <input
-              type="text"
-              name="submitTitle"
-              id="title"
-              minlength="3"
-              required
-            />
-
-            <label for="title">Author</label>
-            <input
-              type="text"
-              name="submitAuthor"
-              id="author"
-              minlength="3"
-              required
-            />
-
-            <label for="numPages">Number of Pages</label>
-            <input
-              type="number"
-              name="submitPages"
-              id="numPages"
-              max="10000"
-              required
-            />
-
-            <label for="status">Status</label>
-            <select name="submitStatus" id="status">
-              <option value="Read">Read</option>
-              <option value="Not Read" selected>Not Read</option>
-            </select>
-
-            <button class="submitButton">Submit</button>
+            <div>
+              <label for="title">Book Title</label>
+              <input
+                type="text"
+                name="submitTitle"
+                id="title"
+                minlength="3"
+                required
+              />
+            </div>
+            <div>
+              <label for="title">Author</label>
+              <input
+                type="text"
+                name="submitAuthor"
+                id="author"
+                minlength="3"
+                required
+              />
+            </div>
+            <div>
+              <label for="numPages">Number of Pages</label>
+              <input
+                type="number"
+                name="submitPages"
+                id="numPages"
+                max="10000"
+                required
+              />
+            </div>
+            <div>
+              <label for="status">Status</label>
+              <select name="submitStatus" id="status">
+                <option value="Read">Read</option>
+                <option value="Not Read" selected>Not Read</option>
+              </select>
+            </div>
+            <div class="submitGrid">
+              <button class="submitButton">Submit</button>
+            </div>
           </form>
         </div>
       </div>

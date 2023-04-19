@@ -1,21 +1,18 @@
 body{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Helvetica, sans-serif;
     width: 100vw;
     height: 100vh;
     margin: 0;
-
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
-    
 }
-/* 
+
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
-
 .header{
     display: flex;
     flex-direction: column;
@@ -26,130 +23,127 @@ body{
     padding-top: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 2rem;
-    font-weight: 100; }
-
 h1 { font-size: 3.0rem; font-weight: lighter;} */
 
 /* Tables */
 
-/* th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1; 
-  font-size: 1.5rem;
-}
-
 tr:first-child{
     background-color: rgba(66, 161, 66, 0.1);
 }
-
 tr:nth-child(2n){
     background-color: rgba(222, 222, 222, 0.518);
 }
 
+.content{
+    width: 100%;
+}
 
 table{
     display: table;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,.25);
-    margin-bottom: 1em;
     border-collapse: collapse;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 100;
 }
 
-.th_delete{
-    min-width: 3em;
+.deleteBtn>button{
+    background-color: white;
+    border: 1px solid gray;
+    color: rgb(147, 1, 1);
 }
 
-.deleteBtn > button{
-    background-color: rgba(255, 0, 0, 0.071);
+.deleteBtn>button:hover{
+    background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px  rgba(255, 0, 0, 0.1);;
 }
 
-.deleteBtn > button:hover{
-    color: white;
-    background-color: rgba(255, 0, 0, 1);
+.th_delete, .th_status, .th_pages{
+    width: 10%;
 }
 
-.read{
-    background-color: rgb(92, 255, 47,0.8);
-}
-
-.not_read{
-    background-color: red;
-}
-
-tbody,thead,th,tr,td{
-    width: 100%;
-}
-
-.deleteDiv{
+.showForm{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0.5rem;
+    padding-bottom: 3em;
 }
 
-.content{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+#add_book{
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    background-color: rgb(236, 236, 236);
+    color: gray;
 }
 
-hr{
-    width: 100%;
-    border: 2px solid gray;
-    margin-top: 1em;
-    margin-bottom: 2em;
+#add_book:hover{
+    background-color: rgb(247, 247, 247);
+    color: black;
 }
 
-.formGrid{
+th{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+th, td{
+    padding: 0.4rem;
+}
+
+form{
     display: grid;
-    grid-template-rows: repeat(auto-fill, 1fr);
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
-    font-size: 1.5em;
 }
 
-input,select, button{
-    font-family: inherit;
-    font-size: inherit;
-    border-radius: 0.3rem;
-    border: 1px solid gray;
-    text-align: center;
-}
-
-button{
-    width: 100%;
-    cursor: pointer;
-}
-
-input:focus{
-    border: rgba(67, 67, 178, 0.544);
-}
-
-input{
-    padding: 0.1rem 1rem;
-}
-
-input:invalid{
-    border: 1.4px solid rgba(255, 0, 0, 0.713);
-}
-
-input:valid{
-    border: 1.4px solid rgba(66, 161, 66, 0.4);
-}
-
-.submitButton{
+.submitGrid{
     grid-column: span 2;
 }
 
-.submitButton:hover{
-    background-color: rgb(0, 69, 0);
+.submitButton{
+    font-weight: 500;
     color: white;
-} */
+    background-color: rgba(54, 18, 196, 0.721);
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+}
+.formGrid>div{
+    color: rgb(41, 41, 41);
+    font-weight: 100;
+    font-size: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+input, select{
+    font-size: 1.2rem;
+    padding: 0.5em;
+    border: none;
+    border-bottom: 2px solid rgba(54, 18, 196, 0.703);
+    outline: none;
+}
 
 .red{
-    background-color: red;
+    background-color: rgba(218, 42, 22, 0.6);
+}
+
+.green{
+    background-color: rgb(24, 200, 24,0.6);
+}
+
+button{
+    width: fit-content;
+    font-family: Helvetica, sans-serif;
+    font-size: inherit;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: 0.3em 1rem;
 }
