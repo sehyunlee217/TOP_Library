@@ -19,5 +19,4 @@
 - <a href="https://sehyunlee217.github.io/TOP_Sign-Up-Form/">Forth Project - Sign-up Form</a> [HTML | CSS] - CSS Forms 
 - <a href="https://sehyunlee217.github.io/TOP_Admin-Dashboard/">Fifth Project - Admin Dashboard</a> [HTML | CSS] - CSS Grid & Nesting Grid/Flexbox]
 
-- <a href="https://sehyunlee217.github.io/TOP_Library/">Sixth Project - Library</a> [HTML | CSS | JS]
-- JavaScript Objects & Object Constructors
+- <a href="https://sehyunlee217.github.io/TOP_Library/">Sixth Project - Library</a> [HTML | CSS | JS] - JavaScript Objects & Object Constructors
