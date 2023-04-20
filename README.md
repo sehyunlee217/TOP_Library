@@ -1,4 +1,4 @@
-# The Odin Project - Project Admin Dashboard
+# The Odin Project - Library
 
 ## <a href="https://sehyunlee217.github.io/TOP_Library/">Live Preview</a>
 
